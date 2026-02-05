@@ -49,7 +49,7 @@ export default function LoginPage() {
                             <div className="flex items-center justify-between">
                                 <Label htmlFor="password">Password</Label>
                                 <Link
-                                    href="#"
+                                    href="/forgot-password"
                                     className="text-sm font-medium text-primary hover:underline"
                                 >
                                     Forgot password?
@@ -63,7 +63,7 @@ export default function LoginPage() {
                             />
                         </div>
                         {state?.error && (
-                            <div className="text-sm text-red-500 font-medium">
+                            <div className="text-sm text-red-500 font-medium" role="alert" aria-live="assertive">
                                 {state.error}
                             </div>
                         )}

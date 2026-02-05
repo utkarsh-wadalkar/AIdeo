@@ -14,14 +14,25 @@ export async function GET(request: Request) {
         if (!error) {
             const forwardedHost = request.headers.get('x-forwarded-host') // original origin before load balancer
             const isLocalEnv = process.env.NODE_ENV === 'development'
+
+            // Validate 'next' param: Allow only relative paths starting with / and not // (to prevent protocol relative URLs)
+            const safeNext = (next.startsWith('/') && !next.startsWith('//')) ? next : '/'
+
             if (isLocalEnv) {
                 // we can be sure that there is no load balancer in between, so no need to watch for X-Forwarded-Host
-                return NextResponse.redirect(`${origin}${next}`)
+                return NextResponse.redirect(`${origin}${safeNext}`)
             } else if (forwardedHost) {
-                return NextResponse.redirect(`https://${forwardedHost}${next}`)
-            } else {
-                return NextResponse.redirect(`${origin}${next}`)
+                // Validate forwardedHost (simple check to ensure it doesn't contain path/scheme chars)
+                // Ideally, match against an allowed list of domains in production
+                const safeHost = /^[a-zA-Z0-9.-]+(:[0-9]+)?$/.test(forwardedHost) ? forwardedHost : null
+
+                if (safeHost) {
+                    return NextResponse.redirect(`https://${safeHost}${safeNext}`)
+                }
             }
+
+            // Fallback to origin if host invalid or not present
+            return NextResponse.redirect(`${origin}${safeNext}`)
         }
     }
 
