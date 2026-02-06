@@ -25,19 +25,14 @@ const components: { title: string; href: string; description: string }[] = [
         description: "Turn text into professional videos in minutes with AI avatars and voiceovers.",
     },
     {
-        title: "Auto Subtitles",
-        href: "#subtitles",
-        description: "Automatically add accurate subtitles to your videos in over 100 languages.",
+        title: "Smart Scheduler",
+        href: "#scheduler",
+        description: "Auto-post at peak times for maximum engagement on all platforms.",
     },
     {
-        title: "Video Editor",
-        href: "#editor",
-        description: "Cut, crop, and edit your videos directly in the browser. No software needed.",
-    },
-    {
-        title: "Screen Recorder",
-        href: "#recorder",
-        description: "Record your screen and webcam to share your message instantly.",
+        title: "Multi-Platform",
+        href: "#multi-platform",
+        description: "One-click distribute to Shorts, Reels, and TikTok.",
     },
 ]
 

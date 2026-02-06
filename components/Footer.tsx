@@ -24,8 +24,8 @@ export function Footer() {
                         </p>
                         <div className="flex gap-4 text-xs text-gray-500">
                             <span>&copy; {new Date().getFullYear()} AIdeo</span>
-                            <Link href="#" className="hover:text-white transition-colors">Privacy</Link>
-                            <Link href="#" className="hover:text-white transition-colors">Terms</Link>
+                            <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
+                            <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
                         </div>
                     </div>
 
@@ -33,38 +33,38 @@ export function Footer() {
                     <div>
                         <h4 className="font-bold mb-4">Product</h4>
                         <ul className="space-y-3 text-gray-400">
-                            <li><Link href="#" className="hover:text-white transition-colors">Video Editor</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Screen Recorder</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Subtitles & Transcription</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Voice Overs</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Video Compressor</Link></li>
+                            <li><Link href="/features/editor" className="hover:text-white transition-colors">Video Editor</Link></li>
+                            <li><Link href="/features/recorder" className="hover:text-white transition-colors">Screen Recorder</Link></li>
+                            <li><Link href="/features/subtitles" className="hover:text-white transition-colors">Subtitles & Transcription</Link></li>
+                            <li><Link href="/features/voiceovers" className="hover:text-white transition-colors">Voice Overs</Link></li>
+                            <li><Link href="/features/compressor" className="hover:text-white transition-colors">Video Compressor</Link></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="font-bold mb-4">Use Cases</h4>
                         <ul className="space-y-3 text-gray-400">
-                            <li><Link href="#" className="hover:text-white transition-colors">Social Media</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Education</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Marketing</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Training</Link></li>
+                            <li><Link href="/use-cases/social" className="hover:text-white transition-colors">Social Media</Link></li>
+                            <li><Link href="/use-cases/education" className="hover:text-white transition-colors">Education</Link></li>
+                            <li><Link href="/use-cases/marketing" className="hover:text-white transition-colors">Marketing</Link></li>
+                            <li><Link href="/use-cases/training" className="hover:text-white transition-colors">Training</Link></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="font-bold mb-4">Resources</h4>
                         <ul className="space-y-3 text-gray-400">
-                            <li><Link href="#" className="hover:text-white transition-colors">Blog</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Help Center</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Webinars</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Community</Link></li>
+                            <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
+                            <li><Link href="/help" className="hover:text-white transition-colors">Help Center</Link></li>
+                            <li><Link href="/webinars" className="hover:text-white transition-colors">Webinars</Link></li>
+                            <li><Link href="/community" className="hover:text-white transition-colors">Community</Link></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="font-bold mb-4">Company</h4>
                         <ul className="space-y-3 text-gray-400">
-                            <li><Link href="#" className="hover:text-white transition-colors">About</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Careers</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Brand Assets</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Contact</Link></li>
+                            <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
+                            <li><Link href="/careers" className="hover:text-white transition-colors">Careers</Link></li>
+                            <li><Link href="/assets" className="hover:text-white transition-colors">Brand Assets</Link></li>
+                            <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
                         </ul>
                     </div>
                 </div>

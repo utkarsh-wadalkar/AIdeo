@@ -38,17 +38,17 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row pt-4">
-                <Link href="/dashboard">
-                  <Button size="lg" className="h-14 px-8 text-base font-semibold shadow-xl shadow-primary/25 hover:shadow-primary/40 rounded-full transition-all hover:scale-105">
+                <Button asChild size="lg" className="h-14 px-8 text-base font-semibold shadow-xl shadow-primary/25 hover:shadow-primary/40 rounded-full transition-all hover:scale-105">
+                  <Link href="/dashboard">
                     Start Creating for Free
                     <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-                <Link href="#pricing">
-                  <Button variant="outline" size="lg" className="h-14 px-8 text-base rounded-full border-primary/20 hover:bg-primary/5 transition-all">
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="h-14 px-8 text-base rounded-full border-primary/20 hover:bg-primary/5 transition-all">
+                  <Link href="#pricing">
                     View Pricing
-                  </Button>
-                </Link>
+                  </Link>
+                </Button>
               </div>
             </div>
 
@@ -82,7 +82,7 @@ export default function Home() {
 
           <div className="grid gap-6 md:grid-cols-3 md:grid-rows-2 h-auto md:h-[600px]">
             {/* Feature 1 - Large Left */}
-            <div className="group relative overflow-hidden rounded-3xl border border-border/50 bg-card p-8 md:col-span-2 shadow-sm hover:shadow-md transition-all">
+            <div id="video-gen" className="group relative overflow-hidden rounded-3xl border border-border/50 bg-card p-8 md:col-span-2 shadow-sm hover:shadow-md transition-all">
               <div className="absolute top-0 right-0 p-8 opacity-20 group-hover:opacity-40 transition-opacity">
                 <Video className="h-64 w-64 text-primary" />
               </div>
@@ -106,7 +106,7 @@ export default function Home() {
             </div>
 
             {/* Feature 2 - Top Right */}
-            <div className="group relative rounded-3xl border border-border/50 bg-card p-8 shadow-sm hover:shadow-md transition-all">
+            <div id="scheduler" className="group relative rounded-3xl border border-border/50 bg-card p-8 shadow-sm hover:shadow-md transition-all">
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
                 <Calendar className="h-6 w-6" />
               </div>
@@ -117,7 +117,7 @@ export default function Home() {
             </div>
 
             {/* Feature 3 - Bottom Right */}
-            <div className="group relative rounded-3xl border border-border/50 bg-card p-8 shadow-sm hover:shadow-md transition-all">
+            <div id="multi-platform" className="group relative rounded-3xl border border-border/50 bg-card p-8 shadow-sm hover:shadow-md transition-all">
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-blue-500">
                 <Upload className="h-6 w-6" />
               </div>
@@ -174,11 +174,11 @@ export default function Home() {
                     <span>720p HD Exports</span>
                   </li>
                 </ul>
-                <Link href="/signup">
-                  <Button variant="outline" className="w-full rounded-xl border-primary text-primary hover:bg-primary/5">
+                <Button asChild variant="outline" className="w-full rounded-xl border-primary text-primary hover:bg-primary/5">
+                  <Link href="/sign-up">
                     Get Started Free
-                  </Button>
-                </Link>
+                  </Link>
+                </Button>
               </div>
 
               {/* Pro Plan */}
@@ -220,11 +220,11 @@ export default function Home() {
                     <span className="font-medium">Priority 24/7 Support</span>
                   </li>
                 </ul>
-                <Link href="/signup?plan=pro">
-                  <Button className="w-full rounded-xl text-md py-6 font-bold shadow-lg shadow-primary/25">
+                <Button asChild className="w-full rounded-xl text-md py-6 font-bold shadow-lg shadow-primary/25">
+                  <Link href="/sign-up?plan=pro">
                     Upgrade to Pro
-                  </Button>
-                </Link>
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>
