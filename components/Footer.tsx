@@ -24,8 +24,8 @@ export function Footer() {
                         </p>
                         <div className="flex gap-4 text-xs text-gray-500">
                             <span>&copy; {new Date().getFullYear()} AIdeo</span>
-                            <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
-                            <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
+                            <span className="hover:text-white transition-colors cursor-default">Privacy</span>
+                            <span className="hover:text-white transition-colors cursor-default">Terms</span>
                         </div>
                     </div>
 
@@ -33,47 +33,47 @@ export function Footer() {
                     <div>
                         <h4 className="font-bold mb-4">Product</h4>
                         <ul className="space-y-3 text-gray-400">
-                            <li><Link href="/features/editor" className="hover:text-white transition-colors">Video Editor</Link></li>
-                            <li><Link href="/features/recorder" className="hover:text-white transition-colors">Screen Recorder</Link></li>
-                            <li><Link href="/features/subtitles" className="hover:text-white transition-colors">Subtitles & Transcription</Link></li>
-                            <li><Link href="/features/voiceovers" className="hover:text-white transition-colors">Voice Overs</Link></li>
-                            <li><Link href="/features/compressor" className="hover:text-white transition-colors">Video Compressor</Link></li>
+                            <li><span className="hover:text-white transition-colors cursor-default">Video Editor</span></li>
+                            <li><span className="hover:text-white transition-colors cursor-default">Screen Recorder</span></li>
+                            <li><span className="hover:text-white transition-colors cursor-default">Subtitles & Transcription</span></li>
+                            <li><span className="hover:text-white transition-colors cursor-default">Voice Overs</span></li>
+                            <li><span className="hover:text-white transition-colors cursor-default">Video Compressor</span></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="font-bold mb-4">Use Cases</h4>
                         <ul className="space-y-3 text-gray-400">
-                            <li><Link href="/use-cases/social" className="hover:text-white transition-colors">Social Media</Link></li>
-                            <li><Link href="/use-cases/education" className="hover:text-white transition-colors">Education</Link></li>
-                            <li><Link href="/use-cases/marketing" className="hover:text-white transition-colors">Marketing</Link></li>
-                            <li><Link href="/use-cases/training" className="hover:text-white transition-colors">Training</Link></li>
+                            <li><span className="hover:text-white transition-colors cursor-default">Social Media</span></li>
+                            <li><span className="hover:text-white transition-colors cursor-default">Education</span></li>
+                            <li><span className="hover:text-white transition-colors cursor-default">Marketing</span></li>
+                            <li><span className="hover:text-white transition-colors cursor-default">Training</span></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="font-bold mb-4">Resources</h4>
                         <ul className="space-y-3 text-gray-400">
-                            <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
-                            <li><Link href="/help" className="hover:text-white transition-colors">Help Center</Link></li>
-                            <li><Link href="/webinars" className="hover:text-white transition-colors">Webinars</Link></li>
-                            <li><Link href="/community" className="hover:text-white transition-colors">Community</Link></li>
+                            <li><span className="hover:text-white transition-colors cursor-default">Blog</span></li>
+                            <li><span className="hover:text-white transition-colors cursor-default">Help Center</span></li>
+                            <li><span className="hover:text-white transition-colors cursor-default">Webinars</span></li>
+                            <li><span className="hover:text-white transition-colors cursor-default">Community</span></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="font-bold mb-4">Company</h4>
                         <ul className="space-y-3 text-gray-400">
-                            <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
-                            <li><Link href="/careers" className="hover:text-white transition-colors">Careers</Link></li>
-                            <li><Link href="/assets" className="hover:text-white transition-colors">Brand Assets</Link></li>
-                            <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+                            <li><span className="hover:text-white transition-colors cursor-default">About</span></li>
+                            <li><span className="hover:text-white transition-colors cursor-default">Careers</span></li>
+                            <li><span className="hover:text-white transition-colors cursor-default">Brand Assets</span></li>
+                            <li><span className="hover:text-white transition-colors cursor-default">Contact</span></li>
                         </ul>
                     </div>
                 </div>
 
                 {/* Big Typography */}
                 <div className="w-full flex justify-center mt-10 pointer-events-none select-none">
-                    <h1 className="text-[12vw] sm:text-[15vw] font-black leading-none text-white tracking-tighter opacity-100">
+                    <div className="text-[12vw] sm:text-[15vw] font-black leading-none text-white tracking-tighter opacity-100" aria-hidden="true">
                         AIDEO
-                    </h1>
+                    </div>
                 </div>
             </div>
         </footer>

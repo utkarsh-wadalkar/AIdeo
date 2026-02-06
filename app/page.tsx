@@ -53,18 +53,90 @@ export default function Home() {
             </div>
 
             {/* Video Demo Placeholder */}
-            <div className="mt-20 relative mx-auto max-w-5xl rounded-2xl border border-white/10 bg-white/5 p-2 backdrop-blur-sm shadow-2xl glass-card">
-              <div className="aspect-video w-full overflow-hidden rounded-xl bg-gradient-to-br from-gray-900 to-black relative group cursor-pointer">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="h-20 w-20 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 transition-transform group-hover:scale-110">
-                    <Play className="h-8 w-8 text-white fill-white ml-1" />
+            {/* Dashboard Interface Preview */}
+            <div className="mt-20 relative mx-auto max-w-5xl text-left">
+              <div className="relative rounded-2xl border border-white/10 bg-[#0B0F19]/80 backdrop-blur-xl shadow-2xl overflow-hidden glass-card">
+                {/* Window Header */}
+                <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5 bg-white/5">
+                  <div className="h-3 w-3 rounded-full bg-red-500/20 border border-red-500/50"></div>
+                  <div className="h-3 w-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div>
+                  <div className="h-3 w-3 rounded-full bg-green-500/20 border border-green-500/50"></div>
+                  <div className="ml-4 h-6 w-96 rounded-full bg-white/5 text-[10px] text-white/20 flex items-center px-3 font-mono">
+                    aideo.app/dashboard/new
                   </div>
                 </div>
-                <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3">
-                  <div className="h-2 flex-1 rounded-full bg-white/20 overflow-hidden">
-                    <div className="h-full w-1/3 bg-primary rounded-full"></div>
+
+                {/* UI Content */}
+                <div className="flex h-[400px] md:h-[500px]">
+                  {/* Sidebar */}
+                  <div className="w-16 md:w-64 border-r border-white/5 bg-white/2 p-4 flex flex-col gap-4 hidden md:flex">
+                    <div className="h-8 w-8 rounded-lg bg-primary/20 mb-4 animate-pulse"></div>
+                    <div className="h-2 w-12 rounded-full bg-white/10"></div>
+                    <div className="h-2 w-20 rounded-full bg-white/5"></div>
+                    <div className="h-2 w-16 rounded-full bg-white/5"></div>
+                    <div className="h-2 w-24 rounded-full bg-white/5 mt-auto"></div>
                   </div>
-                  <span className="text-xs text-white/70 font-mono">00:15 / 00:45</span>
+
+                  {/* Main Canvas */}
+                  <div className="flex-1 p-6 md:p-10 flex flex-col items-center justify-center relative overflow-hidden bg-black/20">
+                    {/* Background Elements */}
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl"></div>
+
+                    {/* Prompt Box */}
+                    <div className="w-full max-w-2xl bg-[#0F131F] border border-white/10 rounded-2xl p-2 md:p-3 shadow-2xl z-10">
+                      <div className="flex flex-col gap-6 p-6">
+                        <div className="flex items-center gap-2 text-primary text-sm font-medium">
+                          <Sparkles className="h-4 w-4" />
+                          <span>AI Scripter</span>
+                        </div>
+                        <div className="text-2xl md:text-4xl font-medium text-white/90 leading-tight">
+                          Create a 30s video about <span className="text-white/20 animate-pulse">|</span>
+                        </div>
+                        <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent my-2"></div>
+                        <div className="flex items-center justify-between">
+                          <div className="flex gap-2">
+                            <div className="h-8 w-8 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 transition-colors"></div>
+                            <div className="h-8 w-8 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 transition-colors"></div>
+                          </div>
+                          <div className="h-10 px-6 rounded-full bg-primary text-white font-medium flex items-center shadow-lg shadow-primary/20 hover:scale-105 transition-transform cursor-pointer">
+                            Generate
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Checkmarks / Trust indicators underneath */}
+                    <div className="flex gap-6 mt-8 text-sm text-white/40 font-medium">
+                      <div className="flex items-center gap-2">
+                        <div className="h-1.5 w-1.5 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]"></div>
+                        <span>AI Powered</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="h-1.5 w-1.5 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]"></div>
+                        <span>Copyright Free Music</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating Elements (Decorations) */}
+              <div className="absolute -right-8 top-24 p-4 bg-[#1A1F2C]/90 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl transform rotate-6 hidden lg:block animate-float-delayed">
+                <div className="flex gap-3 items-center">
+                  <div className="h-10 w-10 rounded-md bg-gradient-to-br from-purple-500 to-pink-500"></div>
+                  <div>
+                    <div className="h-2 w-20 bg-white/20 rounded-full mb-1.5"></div>
+                    <div className="h-2 w-12 bg-white/10 rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute -left-8 bottom-32 p-4 bg-[#1A1F2C]/90 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl transform -rotate-3 hidden lg:block animate-float">
+                <div className="flex items-center gap-3 text-sm text-white/90">
+                  <div className="flex h-6 w-6 items-center justify-center rounded-full bg-green-500/20 text-green-500">
+                    <Check className="h-3 w-3" />
+                  </div>
+                  <span className="font-medium">Video Exported</span>
                 </div>
               </div>
             </div>
@@ -76,7 +148,7 @@ export default function Home() {
           <div className="mb-20 text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tight sm:text-5xl mb-6">Built for Modern Creators</h2>
             <p className="text-xl text-muted-foreground">
-              Everything you need to dominate social media algorithms functionality.
+              Everything you need to dominate social media algorithms.
             </p>
           </div>
 
@@ -211,7 +283,7 @@ export default function Home() {
                     <div className="mr-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary/20 text-primary">
                       <Check className="h-4 w-4" />
                     </div>
-                    <span className="font-medium">1080p 4K Quality</span>
+                    <span className="font-medium">1080p (Full HD) Support</span>
                   </li>
                   <li className="flex items-center">
                     <div className="mr-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary/20 text-primary">
