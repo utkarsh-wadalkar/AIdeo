@@ -136,6 +136,11 @@ export function Navbar() {
                         </SignUpButton>
                     </SignedOut>
                     <SignedIn>
+                        <Link href="/dashboard">
+                            <Button variant="ghost" className="rounded-full text-foreground/80 hover:bg-white/5 hover:text-foreground">
+                                Dashboard
+                            </Button>
+                        </Link>
                         <UserButton />
                     </SignedIn>
                 </div>
