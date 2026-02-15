@@ -1,5 +1,5 @@
 
-import { SignedIn, UserButton, useUser } from "@clerk/nextjs";
+import { SignedIn, UserButton } from "@clerk/nextjs";
 
 export default function Dashboard() {
     return (

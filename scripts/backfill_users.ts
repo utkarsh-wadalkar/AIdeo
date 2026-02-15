@@ -119,6 +119,11 @@ async function backfillUsers() {
         const primaryEmailObj = user.email_addresses.find((email: any) => email.id === primaryEmailId);
         const email = primaryEmailObj ? primaryEmailObj.email_address : user.email_addresses[0]?.email_address;
 
+        if (!email) {
+            console.warn(`Skipping user ${user.id || user.username}: no email`);
+            continue;
+        }
+
         let name = user.username;
         if (!name && (user.first_name || user.last_name)) {
             name = `${user.first_name || ''} ${user.last_name || ''}`.trim();
