@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Check, Play, Upload, Calendar, Sparkles, Video } from "lucide-react";
+import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
@@ -38,12 +39,24 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row pt-4">
-                <Button asChild size="lg" className="h-14 px-8 text-base font-semibold shadow-xl shadow-primary/25 hover:shadow-primary/40 rounded-full transition-all hover:scale-105">
-                  <Link href="/dashboard">
-                    Start Creating for Free
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
+                <SignedIn>
+                  <Button asChild size="lg" className="h-14 px-8 text-base font-semibold shadow-xl shadow-primary/25 hover:shadow-primary/40 rounded-full transition-all hover:scale-105">
+                    <Link href="/dashboard">
+                      Go to Dashboard
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                </SignedIn>
+
+                <SignedOut>
+                  <SignInButton mode="modal">
+                    <Button size="lg" className="h-14 px-8 text-base font-semibold shadow-xl shadow-primary/25 hover:shadow-primary/40 rounded-full transition-all hover:scale-105">
+                      Start Creating for Free
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Button>
+                  </SignInButton>
+                </SignedOut>
+
                 <Button asChild variant="outline" size="lg" className="h-14 px-8 text-base rounded-full border-primary/20 hover:bg-primary/5 transition-all">
                   <Link href="#pricing">
                     View Pricing
